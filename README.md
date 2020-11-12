@@ -17,4 +17,5 @@ will possibly combine these at somepoint, if i feel like it. <br>
 notes: mpv by itself without streamlink causes a buffering issue where the stream stops playing. <br>
 
 # license
-*you are free to edit, modify, **change tools**, republish, anything you can think of with this script.  i do not claim ownership - __public domain__* <br>
+*you are free to edit, modify, **change tools**, republish, anything you can think of with this script.*<br>
+*i do not claim ownership - __public domain__* <br>
