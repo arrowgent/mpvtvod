@@ -17,9 +17,9 @@ name3=$(twitch-dl videos $name1 --limit 1|grep -m 1 -o 'https://www.twitch.tv/vi
 twitch-dl videos $name1 --limit 1
 
 #show quality options
-echo -e ${BLUE}vod url= $name3${NC}
-echo -e ${RED}streamlink --player-passthrough hls --player mpv $name3 ${RED}quality${NC}
-echo -e ${YEL}youtube-dl -F $name3;youtube-dl -F $name3${NC}
+echo ${BLUE}vod url= $name3${NC}
+echo ${RED}streamlink --player-passthrough hls --player mpv $name3 ${RED}quality${NC}
+echo ${YEL}youtube-dl -F $name3;youtube-dl -F $name3${NC}
 
 #query quality
 read -p "set quality audio, 360p, 480p, 720p, best, etc > " name2;
@@ -28,9 +28,9 @@ read -p "set quality audio, 360p, 480p, 720p, best, etc > " name2;
 while true; do
     read -p "set $name1 quality $name2? N for Source, A for audio, Q to exit > " yna
     case $yna in
-        [Yy]* ) echo -e ${GRN}streamlink --player-passthrough hls --player mpv $name3 $name2${NC};streamlink --player-passthrough hls --player mpv $name3 $name2;;
-        [Nn]* ) echo -e ${GRN}streamlink --player-passthrough hls --player mpv $name3 best${NC};streamlink --player-passthrough hls --player mpv $name3 best;;
-        [Aa]* ) echo -e ${GRN}streamlink --player-passthrough hls --player mpv $name3 audio${NC};streamlink --player-passthrough hls --player mpv $name3 audio;;
+        [Yy]* ) echo ${GRN}streamlink --player-passthrough hls --player mpv $name3 $name2${NC};streamlink --player-passthrough hls --player mpv $name3 $name2;;
+        [Nn]* ) echo ${GRN}streamlink --player-passthrough hls --player mpv $name3 best${NC};streamlink --player-passthrough hls --player mpv $name3 best;;
+        [Aa]* ) echo ${GRN}streamlink --player-passthrough hls --player mpv $name3 audio${NC};streamlink --player-passthrough hls --player mpv $name3 audio;;
         * ) exit;;
     esac
 done
