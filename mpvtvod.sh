@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 # mpv twitch VOD with quality setting using streamlink
 #example: mpvtvod username
 
@@ -28,7 +28,7 @@ read -p "set quality audio, 360p, 480p, 720p, best, etc > " name2;
 
 #option quality or source or quit
 while true; do
-    read -p "set $name1 quality $name2? N for Source, A for audio, L for live, Q to exit > " ynla
+    read -p "set $name1 quality $name2? (Y)es, (N) for Source, (A) for audio, (L) for live, (Q) to exit > " ynla
     case $ynla in
         [Yy]* ) if [ "$name2" = "" ]; then
                     echo ${RED}"quality is not set - set quality to best"${NC}; \
@@ -43,7 +43,7 @@ while true; do
                     name2e=${name2:="best"}
                 fi
                 echo ${YEL}youtube-dl -F https://www.twitch.tv/$name1${NC};youtube-dl -F https://www.twitch.tv/$name1; \
-                echo ${GRN}streamlink --player-passthrough hls --player mpv https://www.twitch.tv/$name1$ $name2${NC};   \
+                echo ${GRN}streamlink --player-passthrough hls --player mpv https://www.twitch.tv/$name1 $name2${NC};   \
                 streamlink --player-passthrough hls --player mpv https://www.twitch.tv/$name1 $name2;;
         [Aa]* ) echo ${GRN}streamlink --player-passthrough hls --player mpv $name3 audio${NC};  \
                 streamlink --player-passthrough hls --player mpv $name3 audio;;
