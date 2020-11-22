@@ -13,8 +13,13 @@ mpv [https://github.com/mpv-player/mpv](https://github.com/mpv-player/mpv)<br>
 # extra
 included here is an older script for opening a live streams <br>
 [mpvtw](https://github.com/arrowgent/mpvtvod/blob/main/mpvtw.sh) <br>
-will possibly combine these at somepoint, if i feel like it. <br>
+will possibly combine these at somepoint, if i feel like it. -- *now combined with mpvtod*<br>
 notes: mpv by itself without streamlink causes a buffering issue where the stream stops playing. <br>
+note: im discovering streamlink/mpv configuration matters a lot for the audio buffer problem. YMMV <br>
+<br>
+[ttv_browser](https://github.com/arrowgent/mpvtvod/blob/main/ttv_brower.sh) <br>
+another script i was working on to popout embedded chat & video player <br>
+with options of being anonymous, noads, or using your current browser login to get channel points <br>
 
 # license
 *you are free to edit, modify, **change tools**, republish, anything you can think of with this script.*<br>
